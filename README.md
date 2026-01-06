@@ -8,7 +8,8 @@ In particolare il sito fa uso di:
 - Astro 
 - TailwindCSS
 - DaisyUI 
-- Preact <br>
+- Preact 
+
 Tali tecnologie sono da considerarsi esterne alla licenza della repository e il copyright dei marchi sopracitati appartiene esclusivamente ai loro detentori e/o team di sviluppo.
 
 ## Limitazioni d'uso, Licenze
