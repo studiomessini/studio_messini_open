@@ -1,0 +1,212 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ClassSlide from "../../components/ClassSlide";
+import { Image } from "astro:assets";
+import imgDeglutizione from "../../assets/served/classes/deglutizione.jpg";
+import imgFrenulo from "../../assets/served/classes/frenulo.jpg";
+import imgTuba from "../../assets/served/classes/tubarica.webp";
+
+const classShorthand = {
+    TMF: {
+        title: "Forma e funzione",
+        subtitle: "Logopedia Ortodonzia Postura",
+        subsubtitle: "la terapia miofunzionale",
+        method: "metodo Messini-Bertarini",
+    },
+    FRN: {
+        title: "Frenulo linguale alterato",
+        subtitle: "valutazione e trattamento logopedico",
+        subsubtitle: "pre-post chirurgico",
+        method: "metodo Messini",
+    },
+    TUB: {
+        title: "Disfunzione tubarica",
+        subtitle: "la presa in carico logopedica",
+        method: "metodo Messini",
+    },
+};
+---
+
+<Layout 
+    title="Corsi tenuti dalla dottoressa Messini"
+    description="Scopri i prossimi corsi di formazione tenuti dalla Dottoressa Liana Messini su Frenulo Linguale Alterato, Terapia Miofunzionale e Disfunzione Tubarica. Iscriviti ora!"
+    canonical="https://studiomessini.com/navigable/classes"
+    ogImage="https://studiomessini.com/logo.webp"
+    robots="index, follow"
+        
+>
+    <div class="text-center mt-10 mb-10">
+        <h1 class="text-3xl lg:text-4xl font-extrabold">Prossimi Corsi</h1>
+        <h2 class="text-xl lg:text-2xl font-medium">
+            di seguito la programmazione<br />
+            dei corsi futuri
+        </h2>
+        <h3 class="mt-2 text-lg font-medium">per una descrizione dei corsi</h3>
+        <a href="/only-redirectable/classes-description" class="link text-lg"
+            >clicca qui</a
+        >
+    </div>
+
+    <ClassSlide
+        title={classShorthand.FRN.title}
+        subtitle={classShorthand.FRN.subtitle}
+        subsubtitle={classShorthand.FRN.subsubtitle}
+        method={classShorthand.FRN.method}
+        when="7-8 Febbraio 2026"
+        type="FRN"
+        where="Latina (LT)"
+        hasBottomBorder={true}
+        client:idle
+    >
+        <Image
+            loading="eager"
+            src={imgFrenulo}
+            alt="Frenulo Linguale Alterato"
+            class="aspect-square lg:w-[600px] md:w-[380px] object-cover lg:max-w-2/3 rounded-4xl shadow-2xl"
+        />
+    </ClassSlide>
+
+    <ClassSlide
+        title={classShorthand.TMF.title}
+        subsubtitle={classShorthand.TMF.subsubtitle}
+        subtitle={classShorthand.TMF.subtitle}
+        method={classShorthand.TMF.method}
+        type="TMF"
+        when="7-8 Marzo 2026"
+        where="Latina (LT)"
+        hasTopBorder={true}
+        hasBottomBorder={true}
+        client:idle
+    >
+        <Image
+            loading="eager"
+            src={imgDeglutizione}
+            alt="Deglutizione disfunzionale"
+            class="aspect-square lg:w-[600px] md:w-[380px] object-cover lg:max-w-2/3 rounded-4xl shadow-2xl"
+        />
+    </ClassSlide>
+
+    <!-- frn 16-17 maggio 26 -->
+    <ClassSlide
+        title={classShorthand.FRN.title}
+        subtitle={classShorthand.FRN.subtitle}
+        subsubtitle={classShorthand.FRN.subsubtitle}
+        method={classShorthand.FRN.method}
+        type="FRN"
+        when="16-17 Maggio 2026"
+        where="Latina (LT)"
+        hasTopBorder={true}
+        hasBottomBorder={true}
+        client:idle
+    >
+        <Image
+            loading="eager"
+            src={imgFrenulo}
+            alt="Frenulo Linguale Alterato"
+            class="aspect-square lg:w-[600px] md:w-[380px] object-cover lg:max-w-2/3 rounded-4xl shadow-2xl"
+        />
+    </ClassSlide>
+
+    <!-- tmf 13 14 giugno 26 -->
+    <ClassSlide
+        title={classShorthand.TMF.title}
+        subsubtitle={classShorthand.TMF.subsubtitle}
+        subtitle={classShorthand.TMF.subtitle}
+        method={classShorthand.TMF.method}
+        type="TMF"
+        when="13-14 Giugno 2026"
+        where="Latina (LT)"
+        hasTopBorder={true}
+        hasBottomBorder={true}
+        client:idle
+    >
+        <Image
+            loading="lazy"
+            src={imgDeglutizione}
+            alt="Deglutizione disfunzionale"
+            class="aspect-square lg:w-[600px] md:w-[380px] object-cover lg:max-w-2/3 rounded-4xl shadow-2xl"
+        />
+    </ClassSlide>
+
+    <!-- frn 4-5 luglio  -->
+    <ClassSlide
+        title={classShorthand.FRN.title}
+        subtitle={classShorthand.FRN.subtitle}
+        subsubtitle={classShorthand.FRN.subsubtitle}
+        method={classShorthand.FRN.method}
+        type="FRN"
+        when="4-5 Luglio 2026"
+        where="Latina (LT)"
+        hasTopBorder={true}
+        hasBottomBorder={true}
+        client:idle
+    >
+        <Image
+            loading="lazy"
+            src={imgFrenulo}
+            alt="Frenulo Linguale Alterato"
+            class="aspect-square lg:w-[600px] md:w-[380px] object-cover lg:max-w-2/3 rounded-4xl shadow-2xl"
+        />
+    </ClassSlide>
+
+    <!-- tmf 3-4 ottobre -->
+    <ClassSlide
+        title={classShorthand.TMF.title}
+        subsubtitle={classShorthand.TMF.subsubtitle}
+        subtitle={classShorthand.TMF.subtitle}
+        method={classShorthand.TMF.method}
+        type="TMF"
+        when="3-4 Ottobre 2026"
+        where="Latina (LT)"
+        hasTopBorder={true}
+        hasBottomBorder={true}
+        client:idle
+    >
+        <Image
+            loading="lazy"
+            src={imgDeglutizione}
+            alt="Deglutizione disfunzionale"
+            class="aspect-square lg:w-[600px] md:w-[380px] object-cover lg:max-w-2/3 rounded-4xl shadow-2xl"
+        />
+    </ClassSlide>
+
+    <!-- tub 7 novembre -->
+    <ClassSlide
+        title={classShorthand.TUB.title}
+        subtitle={classShorthand.TUB.subtitle}
+        method={classShorthand.TUB.method}
+        type="TUB"
+        when="7 Novembre 2026"
+        where="Latina (LT)"
+        hasTopBorder={true}
+        hasBottomBorder={true}
+        client:idle
+    >
+        <Image
+            loading="lazy"
+            src={imgTuba}
+            alt="Disfunzione tubarica"
+            class="aspect-square lg:w-[600px] md:w-[380px] object-cover lg:max-w-2/3 rounded-4xl shadow-2xl"
+        />
+    </ClassSlide>
+
+    <!-- tmf 12-13 dicembre -->
+    <ClassSlide
+        title={classShorthand.TMF.title}
+        subsubtitle={classShorthand.TMF.subsubtitle}
+        subtitle={classShorthand.TMF.subtitle}
+        method={classShorthand.TMF.method}
+        type="TMF"
+        when="12-13 Dicembre 2026"
+        where="Latina (LT)"
+        hasTopBorder={true}
+        client:idle
+    >
+        <Image
+            loading="lazy"
+            src={imgDeglutizione}
+            alt="Deglutizione disfunzionale"
+            class="aspect-square lg:w-[600px] md:w-[380px] object-cover lg:max-w-2/3 rounded-4xl shadow-2xl"
+        />
+    </ClassSlide>
+</Layout>

@@ -1,0 +1,57 @@
+---
+import { Image } from "astro:assets";
+import abtImage from "../assets/served/about/about4.webp";
+---
+
+<!-- HERO from daisyUI -->
+<h1
+    class="font-bold text-4xl
+    mt-10 
+    md:mt-12
+    lg:mt-18
+    text-black
+    text-center"
+>
+    Chi sono
+</h1>
+<div
+    class="flex flex-col mt-2 lg:mt-9 md:mt-8 hero bg-inherit mb-20 w-2/3 mx-auto"
+>
+    <div
+        class="hero-content flex-col text-center lg:flex-row items-center justify-center"
+    >
+        <Image
+            loading="eager"
+            id="hero-image-circle"
+            src={abtImage}
+            alt="Fotografia dottoressa Liana Messini"
+            class="mask mask-circle shadow-2xl lg:w-1/2 motion-reduce:opacity-100 not-motion-reduce:opacity-0 not-motion-reduce:animate-fadeIn"
+        />
+        <div class="mx-auto px-8 lg:px-20 flex flex-col justify-center lg:w-1/2">
+            <h2
+                class="text-2xl text-black font-bold text-center"
+            >
+                <p>Dottoressa Magistrale</p><p>Liana Messini</p>
+            </h2>
+            <!-- <h3
+                class="py-6 font-semibold text-xl text-base-100 text-shadow-black/30 text-shadow-lg text-center"
+            >
+                Responsabile Ambulatorio Logopedico ASL Latina - dal 1992
+            </h3> -->
+            <div class="mt-6 flex flex-row justify-center items-center gap-4">
+                <button
+                    id="scrollAboutBtn"
+                    class=" font-medium text-lg rounded-4xl btn btn-soft  mx-auto"
+                    >Dimmi di più</button
+                >
+                <a
+                    href="/CV.doc"
+                    download
+                    class=" font-medium text-lg rounded-4xl btn btn-soft mx-auto"
+                    >Scarica CV</a
+                >
+            </div>
+        </div>
+    </div>
+</div>
+<!-- HERO from daisyUI ended -->

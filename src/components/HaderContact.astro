@@ -1,0 +1,32 @@
+---
+import { Image } from "astro:assets";
+import contactImage from '../assets/served/hero_photos/herocontact.webp';
+---
+<div class="hero min-h-svh">
+
+<Image
+    loading="eager"
+    src={contactImage}
+    alt="un telefono pubblico, cabina telefonica vintage rossa"
+    class=" object-cover w-full h-full inset-0"
+
+/>
+<div class="bg-[rgba(0,0,0,0.6)] w-full h-full inset-0"> </div>  
+<div class="hero-content text-center motion-reduce:animate-none not-motion-reduce:opacity-0 not-motion-reduce:animate-fadeIn-fast ">
+    <div class="max-w-md
+    lg:max-w-lg 
+    flex flex-col 
+     
+     
+    bg-base-100/90
+    lg:p-20
+    lg:mb-10
+    p-8
+    mb-20
+    rounded-3xl">
+      <h1 class="mb-5  text-black  text-4xl font-bold">Contatti</h1>
+      <h2 class="opacity-100 mb-5  text-black text-2xl leading-relaxed">Chiama, scrivi o prendi un appuntamento!</h2>
+      <button id="button-hero-contact" class="btn btn-primary text-lg motion-reduce:opacity-100 not-motion-reduce:opacity-0 not-motion-reduce:animate-fadeIn-fast-delay ">Dimmi di più</button>
+    </div>
+  </div>
+</div>

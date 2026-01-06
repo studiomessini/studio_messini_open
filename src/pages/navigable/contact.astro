@@ -1,0 +1,106 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import HaderContact from "../../components/HaderContact.astro";
+---
+<Layout
+  title="Contatti"
+  description="Contatta lo Studio per ogni dubbio o esigenza in ambito logopedico. Siamo qui per aiutarti!"
+  canonical="https://studiomessini.com/navigable/contact"
+  ogImage="https://studiomessini.com/logo.webp"
+  robots="index, follow"
+>
+  <HaderContact />
+  <div id="contact-anchor"></div>
+  <div
+    class="my-10 md:my-12 lg:my-18 flex flex-col lg:flex-row gap-4 md:gap-4 lg:gap-20 justify-center items-center mb-10 lg:w-full"
+  >
+    <div class="flex flex-col p-10 bg-base-100 rounded-4xl">
+      <div
+        class="flex flex-col leading-8 font-bold text-sm lg:text-xl text-center"
+      >
+        <p class="text-lg">📞 APPUNTAMENTI:</p>
+        <a class="link mb-4" href="tel:+393519341608">+39 3519341608</a>
+        <p class="text-lg">📱 INFO CORSI:</p>
+        <a class="link mb-4" href="tel:+393471844490">+39 3471844490</a>
+        <p class="text-lg">📧 EMAIL:</p>
+        <a class="link mb-4" href="mailto:info@studiomessini.com"
+          >info@studiomessini.com</a
+        >
+        <p class="text-lg">🕒 ORARI SEGRETERIA:</p>
+        <p class="mb-4">Lun-Ven h14:00 - h18:00</p>
+        <p class="text-lg">👩🏼‍⚕️ ORARI STUDIO:</p>
+        <p class="mb-4">Lun-Gio h12:00 - h18:00</p>
+        <p class="text-lg">📍 INDIRIZZO:</p>
+        <p>Viale G. Mazzini, 1</p>
+        <p>Scala A, Int.2, Latina (LT)</p>
+      </div>
+    </div>
+    <div
+      id="map-placeholder"
+      class="rounded-4xl w-xs lg:w-md aspect-square flex items-center justify-center bg-base-100 text-center p-4 pointer-events-none"
+    >
+      <div class="max-w-sm pointer-events-auto">
+        <p class="text-xl font-semibold mb-3">📍 Visualizza la mappa</p>
+        <p class="text-md leading-relaxed mb-4">
+          Cliccando caricherai Google Maps, un servizio di terze parti. 
+          I tuoi dati saranno trattati secondo la 
+          <a 
+            href="https://policies.google.com/privacy" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="underline hover:text-blue-600"
+          ><br/>
+            Privacy Policy di Google
+          </a>.
+        </p>
+        <p class="text-md text mb-4">
+          Consulta la nostra 
+          <a 
+            href="/policy_studio.docx" 
+            class="underline hover:text-blue-600"
+          >
+            Informativa Privacy<br />
+          </a> 
+        per maggiori dettagli.
+        </p>
+        <button 
+          id="load-map-btn"
+          class="px-6 py-2 btn btn-warning btn-lg rounded-lg "
+        >
+            voglio procedere
+        </button>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const buttonScrollToContact = document.getElementById(
+      "button-hero-contact",
+    );
+    buttonScrollToContact?.addEventListener("click", () => {
+      const contactAnchor = document.getElementById("contact-anchor");
+      contactAnchor?.scrollIntoView({ behavior: "smooth" });
+    });
+
+    const placeholder = document.getElementById("map-placeholder");
+    const loadBtn = document.getElementById("load-map-btn");
+    
+    const loadMap = () => {
+      const iframe = document.createElement("iframe");
+      iframe.title = "Posizione geografica dello Studio Messini";
+      iframe.className = "rounded-4xl w-xs lg:w-md aspect-square";
+      iframe.src =
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2989.6860474618925!2d12.90409267661424!3d41.4677241910074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13250c7d7aeccc0f%3A0x41621e0efb0439ab!2sDott.ssa%20Liana%20Messini%2C%20Logopedista!5e0!3m2!1sit!2sit!5m2!1sit!2sit";
+      iframe.style.border = "0";
+      iframe.loading = "lazy";
+      iframe.referrerPolicy = "no-referrer-when-downgrade";
+      iframe.allowFullscreen = true;
+      
+      placeholder?.replaceWith(iframe);
+    };
+
+    loadBtn?.addEventListener("click", loadMap);
+  });
+</script>

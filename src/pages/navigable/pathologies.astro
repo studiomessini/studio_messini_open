@@ -1,0 +1,148 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Slide from "../../components/Slide";
+
+import { Image } from "astro:assets";
+import imgBalb from "../../assets/served/pathologies/balbuzie.webp";
+import imgFrenulo from "../../assets/served/pathologies/frenulo.webp";
+import imgLaringe from "../../assets/served/pathologies/laringectomia.webp";
+import imgDeglutizione from "../../assets/served/pathologies/deglutizione_spiegazione.jpg";
+import imgPFacciale from "../../assets/served/pathologies/pfacciale.webp";
+import imgTubarica from "../../assets/served/pathologies/rtubarica.webp";
+import imgDisfonia from "../../assets/served/pathologies/disfonia.webp";
+
+---
+
+<Layout 
+    title="Patologie Trattate"
+    description="Scopri le patologie trattate dalla Dottoressa, tra cui balbuzie, frenulo linguale alterato, laringectomia, deglutizione disfunzionale, paralisi del facciale, rieducazione tubarica e disturbi della voce."
+    canonical="https://studiomessini.com/navigable/pathologies"
+    ogImage="https://studiomessini.com/logo.webp"
+    robots="index, follow"
+
+    >
+    <h1 class="text-3xl lg:text-4xl font-extrabold text-center mt-10 mb-10">Patologie Trattate</h1>
+        <Slide
+            title="Balbuzie"
+            text="La balbuzie è “un disturbo caratterizzato da ripetizioni o prolungamenti involontari, udibili o silenti, durante l’emissione di brevi elementi del parlato (suoni, sillabe, parole), che occorrono con frequenza e che non sono facilmente controllabili”. Vi può essere la presenza di sincinesie, tic che accompagnano il parlato disfuente del paziente. Spesso gli stati emotivi del paziente variano, passando da una condizione di eccitamento in cui vi è presenza di fluenza, ad una condizione di tensione in cui emergono emozioni negative come paura, imbarazzo, frustrazione, vergogna in cui il parlato diventa disfluente."
+            subtitle=""
+            subPar=""
+            hasBottomBorder={true}
+            hasLongDescription={true}
+        >
+            <Image
+                loading="eager"
+                src={imgBalb}
+                alt="Immagine rappresentativa della balbuzie"
+                class="aspect-square lg:w-[600px] md:w-[380px] object-cover lg:max-w-2/3 rounded-4xl shadow-2xl"
+            />
+        </Slide>
+
+        <Slide
+            title="Frenulo linguale alterato"
+            text="Il frenulo alterato ha cause congenite, non rappresenta una vera patologia ma costituisce un'anomalia che può provocare notevoli ripercussioni sulla deglutizione, sull’articolazione del linguaggio, sull’apparato stomatognatico, sulla visione, sulla postura ed altro ancora... La valutazione accurata ed una diagnosi precisa sono step indispensabili per poter procedere con l'intervento chirurgico e prendere in carico il paziente e seguirlo nel decorso riabilitativo post operatorio."
+            subtitle=""
+            subPar=""
+            isLeft={true}
+            hasBottomBorder={true}
+            hasTopBorder={true}
+            hasLongDescription={true}
+        >
+            <Image
+                loading="eager"
+                src={imgFrenulo}
+                alt="Immagine rappresentativa del frenulo linguale alterato"
+                class="aspect-square lg:w-[600px] md:w-[380px] object-cover lg:max-w-2/3 rounded-4xl shadow-2xl"
+            />
+        </Slide>
+
+        <Slide
+            title="Laringectomia"
+            text="I pazienti sottoposti a chirurgia oncologica del distretto testa-collo vanno sempre incontro a mutilazioni che interessano anche l’articolazione della parola. La perdita della capacità fonatoria ha importantissime conseguenze sulla qualità della vita del paziente. Nella fase post operatoria sarà opportuno che il paziente intraprenda un percorso (a volte lungo) di riabilitazione logopedica, al fine di riprendere una capacità comunicativa efficace per poter essere reintegrato in un contesto sociale."
+            subtitle=""
+            subPar=""
+            isLeft={false}
+            hasTopBorder={true}
+            hasBottomBorder={true}
+            hasLongDescription={true}
+        >
+        <Image
+            loading="eager"
+            src={imgLaringe}
+            alt="Immagine rappresentativa della laringectomia"
+            class="aspect-square lg:w-[600px] md:w-[380px] object-cover lg:max-w-2/3 rounded-4xl shadow-2xl"
+        />
+        </Slide>
+
+        <Slide
+            title="Deglutizione disfunzionale"
+            text="La deglutizione è un meccanismo neuromuscolare, che va incontro a una fisiologica maturazione passando da una deglutizione di tipo infantile ad una deglutizione di tipo adulto. Quando la deglutizione infantile persiste oltre il periodo fisiologico si parla di deglutizione disfunzionale. Questa disfunzionalità avrà ripercussioni su tutto il sistema tonico posturale. È opportuna una valutazione dettagliata e una presa in carico logopedica – mio funzionale volta a ripristinare le funzioni oro deglutitorie e non solo."
+            subtitle=""
+            subPar=""
+            isLeft={true}
+            hasTopBorder={true}
+            hasBottomBorder={true}
+            hasLongDescription={true}
+        >
+        <Image
+            loading="eager"
+            src={imgDeglutizione}
+            alt="Immagine rappresentativa della deglutizione disfunzionale"
+            class="aspect-square lg:w-[600px] md:w-[380px] object-cover lg:max-w-2/3 rounded-4xl shadow-2xl"
+        />
+        </Slide>
+
+        <Slide
+            title="Paralisi del facciale"
+            text="Nelle paralisi del facciale si riscontrano problemi estetici e funzionali. L’aspetto del viso è alterato in situazione di riposo e ancora di più quando si sorride. Anche a carico dell’occhio si hanno problemi di tipo funzionale, questi, non essendo ben lubrificato dalle palpebre non si chiude completamente. Sia che la paralisi facciale sia di recente insorgenza o insorta da molto tempo, è necessario intraprendere un training logopedico riabilitativo finalizzato al ripristino dell’attività muscolare."
+            subtitle=""
+            subPar=""
+            isLeft={false}
+            hasTopBorder={true}
+            hasBottomBorder={true}
+            hasLongDescription={true}
+        >
+        <Image
+            loading="lazy"
+            src={imgPFacciale}
+            alt="Immagine rappresentativa della paralisi del facciale"
+            class="aspect-square lg:w-[600px] md:w-[380px] object-cover lg:max-w-2/3 rounded-4xl shadow-2xl"
+        />
+        </Slide>
+
+        <Slide 
+            title="Rieducazione tubarica"
+            text="La terapia si basa sull’allenamento e la stimolazione dei muscoli che attivano le tube di Eustachio per facilitare attraverso opportuni esercizi il drenaggio del muco. Tra le cause del disturbo troviamo anche la disfunzione linguale – deglutitoria, pertanto, sará necessario ripristinare anche tale funzione."
+            subtitle=""
+            subPar=""
+            isLeft={true}
+            hasTopBorder={true}
+            hasBottomBorder={true}
+            hasLongDescription={true}
+        >
+        <Image
+            loading="lazy"
+            src={imgTubarica}
+            alt="Immagine rappresentativa della rieducazione tubarica"
+            class="aspect-square lg:w-[600px] md:w-[380px] object-cover lg:max-w-2/3 rounded-4xl shadow-2xl"
+        />
+        </Slide>
+
+        <Slide 
+            title="Voce - Disfonia"
+            text="Con il termine disfonia ci si riferisce in senso ampio a tutti i cambiamenti, qualitativi o quantitativi, a carico della voce. La disfonia può essere di orgine funzionale o organica. Tra le cause organiche troviamo le infiammazioni a carico della laringe, le malformazioni congenite, la presenza di formazioni tumorali o di noduli delle corde vocali ma anche patologie che riguardano la lingua o la trachea. Tra le cause funzionali il surmenage e il malmenage. La rieducazione è volta al ripristino di una voce “comoda”, che possa arrivare il più possibile alla voce fisiologica del paziente."
+            subtitle=""
+            subPar=""
+            isLeft={false}
+            hasTopBorder={true}
+            hasBottomBorder={false}
+            hasLongDescription={true}
+        >
+        <Image
+            loading="lazy"
+            src={imgDisfonia}
+            alt="Immagine rappresentativa dei disturbi della voce e della disfonia"
+            class="aspect-square lg:w-[600px] md:w-[380px] object-cover lg:max-w-2/3 rounded-4xl shadow-2xl"  
+        />
+        </Slide>
+</Layout>

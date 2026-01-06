@@ -1,0 +1,95 @@
+---
+import "../styles/global.css";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import ScrollFab from "../components/ScrollFab";
+
+const siteurl = "https://studiomessini.com";
+const {
+	title = "Studio Messini",
+	description = "Sito Web dello studio logopedico Liana Messini. Uno studio moderno e accogliente.",
+	canonical,
+	ogImage = `${siteurl}/logo.webp`,
+	robots = "index, follow",
+} = Astro.props;
+import "@fontsource-variable/roboto";
+import "@fontsource/opendyslexic/400.css";
+import "@fontsource/opendyslexic/700.css";
+---
+
+<!doctype html>
+<html lang="it">
+	<head>
+		<script type="text/javascript">
+			var _iub = _iub || [];
+			_iub.csConfiguration = {
+				siteId: 3947440,
+				cookiePolicyId: 76906870,
+				storage: { useSiteId: true },
+			};
+			_iub.csLangConfiguration = { it: { cookiePolicyId: 76906870 } };
+		</script>
+		<script
+			type="text/javascript"
+			src="https://cs.iubenda.com/autoblocking/3947440.js"></script>
+		<script type="text/javascript" src="//cdn.iubenda.com/cs/gpp/stub.js"
+		></script>
+		<script
+			type="text/javascript"
+			src="//cdn.iubenda.com/cs/iubenda_cs.js"
+			charset="UTF-8"
+			async></script>
+
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		{canonical ? <link rel="canonical" href={canonical} /> : null}
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		{ogImage ? <meta property="og:image" content={ogImage} /> : null}
+		<meta name="robots" content={robots} />
+
+		<meta name="twitter:card" content="logo.webp" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		{ogImage && <meta name="twitter:image" content={ogImage} />}
+		<link rel="sitemap" href="/sitemap-index.xml" />
+	</head>
+
+	<!-- TODO temporary fix to w-screen scrollbar is hidding x-overflow, possible padding issues -->
+	<body
+		class=`flex flex-col min-h-screen items-center justify-start bg-primary overflow-x-hidden }`
+	>
+		<Navbar />
+		<main class="flex-1">
+			<div id="slot-container" class="">
+				<slot />
+			</div>
+		</main>
+		<ScrollFab client:idle />
+		<Footer />
+	</body>
+</html>
+
+<script is:inline>
+	// session font will be parsed and applied to <html>
+	const loadCookieFont = () => {
+		const preferredFont = document.cookie
+			.split("; ")
+			.find((x) => x.startsWith("preferredFont="))
+			?.split("=")[1];
+
+		if (preferredFont === "dyslexic") {
+			document.documentElement.classList.add("font-dyslexic");
+		} else {
+			document.documentElement.classList.add("font-roboto");
+		}
+	};
+
+	loadCookieFont();
+</script>

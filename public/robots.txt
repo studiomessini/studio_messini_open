@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /only-redirectable/*
+Disallow: /navigable/map
+
+Sitemap: https://studiomessini.com/sitemap-index.xml

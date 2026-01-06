@@ -1,0 +1,59 @@
+---
+import { Image  } from "astro:assets";
+import logo from "../assets/logo.webp";
+import FontToggle from "./FontToggle";
+---
+
+<footer class="footer sm:footer-horizontal bg-base-100 text-base-content p-10">
+  <aside>
+    <Image
+      loading="lazy"
+      src={logo}
+      alt="Studio Logopedico Messini Logo"
+      class="w-16 h-16 mb-2"
+    />
+    <p class="font-medium">
+      Studio Logopedico Messini 
+      <br />
+      Liana Messini, Logopedista
+      <br />
+      P.IVA 02826920593
+      <br />
+      Isc <a 
+      class="link" 
+      href="https://www.tsrmlatina.it/portale/index.php?option=com_content&view=article&id=116%3Acommissione-dalbo-logopedista&catid=34%3Acontenuti&Itemid=109"
+      rel="noopener noreferrer"
+      target="_blank"
+      >Albo Logopedisti n.94</a>
+    </p>
+  </aside>
+  <nav class="font-medium">
+    <h6 class="footer-title  ">Risorse e Riconoscimenti</h6>
+    <a href="https://opendyslexic.org/" rel="noopener noreferrer" target="_blank" class="link link-hover">Font Dislessia (opendyslexic)</a>
+    <a href="https://fonts.google.com/specimen/Roboto"  rel="noopener noreferrer" target="_blank" class="link link-hover">Font Classico (roboto)</a>
+    <a href="https://unsplash.com/" rel="noopener noreferrer" target="_blank" class="link link-hover">Foto Stock (unsplash)</a>
+  </nav>
+  <nav class="font-medium">
+    <h6 class="footer-title font-bold">Collegamenti Rapidi</h6>
+    <a href="/navigable/about" class="link link-hover">Chi sono</a>
+    <a href="/navigable/contact" class="link link-hover">Contatti</a>
+    <a href="/navigable/classes" class="link link-hover">Corsi</a>
+  </nav>
+  <nav class="font-medium">
+    <h6 class="footer-title font-bold">Termini Legali</h6>
+    <a href="/policy_studio.docx" type="download" class="link link-hover">Informativa Dati</a>
+    <a href="/TOS.docx" type="download" class="link link-hover">Termini e Condizioni</a>
+    <a href="/informativa.docx" type="download" class="link link-hover">Informativa Extra Dati</a>
+  </nav>
+
+</footer>
+
+<footer class="footer sm:footer-horizontal footer-center bg-base-300 border-t-2  text-xs font-medium primary p-4">
+
+  
+  <aside>
+    <p>Web Design © {new Date().getFullYear()}
+    <a class="link" target="_blank" rel="noopener noreferrer" href="https://francescojames.dev">Francesco James Fanti</a></p>  
+   
+</aside>
+</footer>

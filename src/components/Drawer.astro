@@ -1,0 +1,86 @@
+---
+const allDirectPages = import.meta.glob('../pages/**navigable/*.astro', { eager: true });
+
+interface navLink {
+  name: string; 
+  route: string;
+}
+
+const homeNavLink : navLink = {
+  name: 'Home',
+  route: '/'
+};
+
+const directPagesNavLinks: navLink[] = Object.keys(allDirectPages).map((path) => {
+
+  const name = path.replace("../pages/navigable/", "")
+    .replace(".astro", "");
+  
+  const route = `/navigable/${name}`;
+
+  return { name, route };
+});
+
+const navigablePagesNavLinks: navLink[] = [...directPagesNavLinks, homeNavLink];
+
+
+const translationMap: Record<string, string> = {
+  'about': 'Chi sono?',
+  'classes': 'Corsi', 
+  'pathologies': 'Patologie trattate',
+  'contact': 'Contatti', 
+  'map': 'Ho formato',
+};
+
+
+---
+<div class="drawer">
+  <input id="my-drawer-1" type="checkbox" class="drawer-toggle" />
+  <div class="drawer-content">
+    
+    <label for="my-drawer-1" class="mx-3.5 btn btn-lg rounded-2xl btn-accent drawer-button" aria-label="open sidebar">
+      <span class="sr-only">apri Menu</span>
+      <svg id="hamburger-menu" aria-label="hamburger-menu" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
+    </label>
+  </div>
+  <div class="drawer-side ">
+    <label for="my-drawer-1" aria-label="chiudi barra laterale" class="drawer-overlay">
+      <span class="sr-only">chiudi menu</span>
+    </label>
+    <ul class="flex flex-col gap-4 justify-center menu bg-primary min-h-full w-80 p-4 font-bold text-lg">
+       
+       { navigablePagesNavLinks.map((p) => (
+        <li>
+          <a href={p.route} 
+            class={`btn btn-accent text-lg drawer-button`} 
+            aria-label={translationMap[p.name] ?? p.name}
+          >
+            {translationMap[p.name] ?? p.name }
+          </a>
+        </li>
+      )) }
+    </ul>
+  </div>
+</div>
+
+<script>
+  const isActive = (route: string): boolean => {
+    const normalizedPathname = window.location.pathname.endsWith('/') && window.location.pathname.length > 1
+      ? window.location.pathname.slice(0, -1)
+      : window.location.pathname;
+
+    return normalizedPathname === route;
+  };
+
+  const drawerButtons = document.querySelectorAll('.drawer-button');
+  
+  // active button 
+  drawerButtons.forEach((link) => {
+    const href = link.getAttribute('href');
+    if (href && isActive(href)) {
+      link.classList.remove('btn-accent');
+      link.classList.add('btn-base-100');
+    }
+  });
+
+</script>

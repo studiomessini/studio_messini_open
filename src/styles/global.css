@@ -1,0 +1,64 @@
+
+@import "tailwindcss";
+@theme {
+  --font-dyslexic: 'OpenDyslexic', sans-serif;
+  --font-roboto: 'Roboto Variable', sans-serif;
+
+  --animate-fadeIn: fadeIn 2s ease-in forwards;
+  --animate-fadeIn-delay: fadeIn 1s ease-in 2.3s forwards;
+  --animate-fadeIn-fast: fadeIn 1.5s ease-in forwards;
+  --animate-fadeIn-fast-delay: fadeIn 1.5s ease-in 1.2s forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@plugin "daisyui" {
+    themes: ["studiomessini"];  
+    /* themes: emerald --default; */
+};
+
+
+
+
+@plugin "daisyui/theme" {
+  name: "studiomessini";
+  default: true;
+  prefersdark: false;
+  color-scheme: "light";
+  --color-base-100: #D9EDDF;
+  --color-base-200: #C4E4CE;
+  --color-base-300: #A8D7B7;
+  --color-base-content: oklch(21% 0.006 56.043);
+  --color-primary: #81ca9d;
+  --color-primary-content: oklch(26% 0.051 172.552);
+  --color-secondary: #419692;
+  --color-secondary-content: oklch(14% 0.005 285.823);
+  --color-accent: #FFA261;
+  --color-accent-content: oklch(12% 0.042 264.695);
+  --color-neutral: oklch(87% 0 0);
+  --color-neutral-content: oklch(12% 0.042 264.695);
+  --color-info: oklch(77% 0.152 181.912);
+  --color-info-content: oklch(13% 0.028 261.692);
+  --color-success: oklch(78% 0.154 211.53);
+  --color-success-content: oklch(12% 0.042 264.695);
+  --color-warning: #EE4879;
+  --color-warning-content: oklch(0% 0 0);
+  --color-error: oklch(63% 0.237 25.331);
+  --color-error-content: oklch(14% 0 0);
+  --radius-selector: 0rem;
+  --radius-field: 0.5rem;
+  --radius-box: 1rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.28125rem;
+  --border: 1.5px;
+  --depth: 0;
+  --noise: 0;
+}

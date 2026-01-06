@@ -1,0 +1,40 @@
+---
+import "../styles/global.css";
+import Drawer from "./Drawer.astro";
+import { Image } from "astro:assets";
+import Logo from "../assets/logo.png";
+import FontToggle from "./FontToggle.tsx";
+---
+<!-- TODO accessibility flags -->
+<div class="navbar bg-linear-to-r from-base-100 to-primary shadow-lg">
+    <div class="flex-1 flex gap-2 items-center">
+        <Image
+            loading="eager"
+            class="mx-2 w-20 h-auto transition-opacity duration-500 hover:opacity-80 hover:cursor-pointer"
+            id="logo-banner"
+            src={Logo}
+            alt="Studio Messini Logo"
+        />
+        <a
+            id="banner-button"
+            class="hover:link rounded-4xl font-extrabold text-xl lg:text-2xl text-[#262B3B]"
+            href="/"
+            >Studio Messini</a
+        >
+    </div>
+    <div class="flex-none">
+        <Drawer />
+    </div>
+</div>
+<div id="nav-anchor" />
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const handleLogoClick = () => {
+            window.location.href = "/";
+        };
+
+        const imageBanner = document.getElementById("logo-banner");
+        imageBanner?.addEventListener("click", handleLogoClick);
+    });
+</script>
+

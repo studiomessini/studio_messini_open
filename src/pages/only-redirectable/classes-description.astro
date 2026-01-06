@@ -1,0 +1,77 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Slide from "../../components/Slide";
+import { Image } from "astro:assets";
+import imgTmf from "../../assets/served/classes_description/deglutizione_corso.jpg";
+import imgFrn from "../../assets/served/classes_description/frenulo_corso.jpg";
+import imgTub from "../../assets/served/classes_description/tubaricacorso.webp";
+---
+
+<Layout title="Descrizione Corsi"
+    description="Scopri la descrizione dettagliata dei corsi offerti dalla Dottoressa Liana Messini"
+    canonical="https://studiomessini.com/only-redirectable/classes-description"
+    ogImage="https://studiomessini.com/logo.webp"
+    robots="noindex, nofollow"
+>
+    <div class="text-center mt-10 mb-10">
+        <h1 class="text-3xl lg:text-4xl font-extrabold">Descrizione Corsi</h1>
+        <h2 class="text-xl lg:text-2xl font-medium">
+            qui puoi trovare una descrizione<br />
+            degli argomenti dei corsi
+        </h2>
+        <h3 class="mt-2 text-lg font-medium">per tornare alle date</h3>
+        <a href="/navigable/classes" class="link text-lg"
+            >clicca qui</a
+        >
+    </div>
+
+    <Slide
+        hasBottomBorder={true}
+        title="Frenulo linguale alterato"
+        subtitle="valutazione e trattamento logopedico"
+        subPar="pre-post chirurgico"
+        subSubtitle="[metodo Messini]"
+        hasLongDescription={true}
+        text="Sottile lamina tissutale di natura fibromucosa che congiunge la parete ventrale della lingua alla mucosa del pavimento orale. Quando risulta particolarmente breve parliamo di «frenulo corto». Non rappresenta una vera e propria patologia, piuttosto costituisce un’anomalia anatomica congenita. Alcune ricerche evidenziano come la condizione della brevità del frenulo linguale sia particolarmente frequente tra i neonati. Si stima che il frenulo breve interessi il 5–10 % dei neonati e che, tra i due sessi, i maschi siano i più a rischio (prevalenza: 2 maschi, 1 femmina)."
+    >
+        <Image
+            loading="eager"
+            src={imgFrn}
+            alt="Frenulo linguale alterato"
+            class="aspect-square lg:w-[600px] md:w-[380px] object-cover lg:max-w-2/3 rounded-4xl shadow-2xl"
+        />
+    </Slide>
+
+    <Slide
+        hasTopBorder={true}
+        hasBottomBorder={true}
+        title="Forma e funzione"
+        subtitle="Logopedia Ortodonzia Postura"
+        subPar="la terapia miofunzionale"
+        subSubtitle="[metodo Messini-Bertarini]"
+        hasLongDescription={true}
+        text="La deglutizione è un meccanismo neuromuscolare che va incontro ad una fisiologica maturazione, dalla deglutizione infantile alla deglutizione adulta o matura. Si definisce “deglutizione disfunzionale” quando la deglutizione di tipo infantile persiste oltre il periodo ritenuto fisiologico; in pratica quando la lingua - al momento dell’atto deglutitorio - spinge contro i denti o fra i denti, in posizione anteriore e/o laterale, invece di schiacciarsi contro il palato. In associazione avremo un alterato comportamento neuromuscolare di tutto il distretto orofacciale. Le compromissioni possono riguardare la postura; l’accomodamento oculare; l’appoggio podalico. Questa anomalia può riguardare bambini, adolescenti e adulti. Il logopedista ha il compito di valutare accuratamente il paziente e di intraprendere una terapia mio funzionale volta al ripristino di tutte le funzioni coinvolte."
+    >
+        <Image
+            loading="eager"
+            src={imgTmf}
+            alt="Deglutizione disfunzionale"
+            class="aspect-square lg:w-[600px] md:w-[380px] object-cover lg:max-w-2/3 rounded-4xl shadow-2xl"
+        />
+    </Slide>
+    <Slide
+        hasTopBorder={true}
+        title="Disfunzione tubarica"
+        subtitle="la presa in carico logopedica"
+        subSubtitle="[metodo Messini]"
+        hasLongDescription={true}
+        text="La disfunzione tubarica è un’eventualità fastidiosa quanto dolorosa che può incidere negativamente sulla capacità uditiva. In particolare, il disturbo si verifica se la tuba di Eustachio non è in grado di aprirsi come dovrebbe e quindi di drenare il muco nel rinofaringe. Le conseguenze della “insufficienza” sono importanti e dolorose: la pressione negativa nell’orecchio medio é responsabile del fastidioso senso di ovattamento, che può degenerare con versamento endotimpanico che, a sua volta, può causare un’infezione, come l’otite. La presa in carico logopedica è di fondamentale importanza per restituire il corretto funzionamento del sistema lingua-naso-orecchio."
+    >
+        <Image
+            loading="lazy"
+            src={imgTub}
+            alt="Disfunzione tubarica"
+            class="aspect-square lg:w-[600px] md:w-[380px] object-cover lg:max-w-2/3 rounded-4xl shadow-2xl"
+        />
+    </Slide>
+</Layout>

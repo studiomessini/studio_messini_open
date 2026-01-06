@@ -1,0 +1,230 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import HeaderAbout from "../../components/HeaderAbout.astro";
+import { Image } from "astro:assets";
+import abt1 from "../../assets/served/about/about1_1.jpg";
+import abt2 from "../../assets/served/about/about2.webp";
+import abt3 from "../../assets/served/about/about3.webp";
+
+import borragan from "../../assets/served/collaboratori/borragan.webp";
+import grandi from "../../assets/served/collaboratori/grandi.webp";
+import guimares from "../../assets/served/collaboratori/guimares.webp";
+import leal from "../../assets/served/collaboratori/leal.webp";
+import marchesan2 from "../../assets/served/collaboratori/marchesan2.webp";
+import neira from "../../assets/served/collaboratori/neira3.webp";
+import scopelliti from "../../assets/served/collaboratori/scopelliti.webp";
+
+import Slide from "../../components/Slide";
+---
+
+<Layout 
+  title="Liana Messini - Chi Sono"
+  description="Informazioni sulla Dottoressa Liana Messini, logopedista esperta in Terapia Miofunzionale e Frenulo Linguale Alterato con esperienza e formazione internazionale."
+  canonical="https://studiomessini.com/navigable/about"
+  ogImage="https://studiomessini.com/logo.webp"
+  robots="index, follow"
+  >
+  <HeaderAbout />
+
+
+
+  <div id="collaborators-slides-anchor"></div>
+
+  <div id="slides-anchor"></div>
+  <Slide
+    isLeft={true}
+    hasCustomBorder={true}
+    customBorderParams={["border-t-4 border-b-4"]}
+    title="Responsabile"
+    subtitle="Ambulatorio Logopedico"
+    text="ASL Latina - dal 1992"
+    
+    >
+  
+    <Image
+      loading="eager"
+      src={abt1}
+      alt="foto dell'ingresso della asl latina"
+      class="aspect-square lg:w-[600px] md:w-[380px] object-cover lg:max-w-2/3 rounded-4xl shadow-2xl"
+    />
+    
+  </Slide>
+  
+  <Slide
+    isLeft={false}
+    hasBottomBorder={true}
+    title="Formatrice"
+    subtitle=""
+    text="dal 2012"
+  >
+    <Image
+      loading="eager"
+      src={abt2}
+      alt="dottoressa liana messini mentre tiene un corso di formazione"
+      class="aspect-square lg:w-[600px] md:w-[380px] object-cover lg:max-w-2/3 rounded-4xl shadow-2xl"
+    />
+  </Slide>
+  <Slide
+    isLeft={true}
+    hasTopBorder={true}
+    hasBottomBorder={false}
+    title="Libera Professionista"
+    subtitle=""
+    text="dal 2015"
+  >
+    <Image
+    loading="lazy"
+      src={abt3}
+      alt="carosello di foto dello studio logopedico messini"
+      class="aspect-square lg:w-[600px] md:w-[380px] object-cover lg:max-w-2/3 rounded-4xl shadow-2xl"
+    />
+  </Slide>
+
+  <div class="bg-accent py-5">
+    <div
+      class="flex flex-col flex-wrap justify-center items-center font-bold text-xl lg:text-3xl text-center
+  bg-white px-10 py-20"
+    >
+      Crescita professionale anche grazie a grandi professionisti internazionali
+    </div>
+  </div>
+
+  <div id="collaborators-slides-anchor"></div>
+  <Slide
+    isLeft={false}
+    bgVariant={true}
+    hasBottomBorder={true}
+    title="Gonzago Leal"
+    subtitle="Coordinatore Clinico presso il Centro Balbuzie"
+    subPar="Lisbona"
+    text="(Portogallo)"
+  >
+    <Image
+      loading="lazy"
+      src={leal}
+      alt="foto di gonzago leal"
+      class="aspect-square lg:w-[600px] md:w-[380px] object-cover lg:max-w-2/3 rounded-4xl shadow-2xl"
+    />
+  </Slide>
+
+  <Slide
+    isLeft={true}
+    hasTopBorder={true}
+    hasBottomBorder={true}
+    bgVariant={true}
+    title="Irene Marchesan"
+    subtitle="Direttore Clinica Salute e Educazione"
+    subPar="San Paolo"
+    text="(Brasile)"
+  >
+    <Image
+      loading="lazy"
+      src={marchesan2}
+      alt="foto di irene marchesan"
+      class="aspect-square lg:w-[600px] md:w-[380px] object-cover lg:max-w-2/3 rounded-4xl shadow-2xl"
+    />
+  </Slide>
+
+  <Slide
+    isLeft={false}
+    hasTopBorder={true}
+    hasBottomBorder={true}
+    bgVariant={true}
+    title="Bruno Guimares"
+    subtitle="Fonoaudiologo presso Clinica Espaço Agua"
+    subPar="Fortaleza"
+    text="(Brasile)"
+  >
+    <Image
+      loading="lazy"
+      src={guimares}
+      alt="foto di bruno guimares"
+      class="aspect-square lg:w-[600px] md:w-[380px] object-cover lg:max-w-2/3 rounded-4xl shadow-2xl"
+    />
+  </Slide>
+
+  <Slide
+    isLeft={true}
+    hasTopBorder={true}
+    hasBottomBorder={true}
+    bgVariant={true}
+    title="Alfonso Borragan Torre"
+    subtitle="Direttore del Centro di Foniatria e Logopedia"
+    subPar="Santander"
+    text="(Spagna)"
+  >
+    <Image
+      loading="lazy"
+      src={borragan}
+      alt="foto di alfonso borragan torre"
+      class="aspect-square lg:w-[600px] md:w-[380px] object-cover lg:max-w-2/3 rounded-4xl shadow-2xl"
+    />
+  </Slide>
+
+  <Slide
+    isLeft={false}
+    hasTopBorder={true}
+    hasBottomBorder={true}
+    bgVariant={true}
+    title="Diana Grandi"
+    subtitle="Logopedista esperta in Disfunzioni Oro-Facciali"
+    subPar="Barcellona"
+    text="(Spagna)"
+  >
+    <Image
+      loading="lazy"
+      src={grandi}
+      alt="foto di diana grandi"
+      class="aspect-square lg:w-[600px] md:w-[380px] object-cover lg:max-w-2/3 rounded-4xl shadow-2xl"
+    />
+  </Slide>
+
+  <Slide
+    isLeft={true}
+    hasTopBorder={true}
+    hasBottomBorder={true}
+    bgVariant={true}
+    title="Domenico Scopelliti"
+    subtitle="Direttore UOC Chirurgia Maxillo-Facciale"
+    subPar="San Filippo Neri Roma"
+    text="(Italia)"
+  >
+    <Image
+      loading="lazy"
+      src={scopelliti}
+      alt="foto di domenico scopelliti"
+      class="aspect-square lg:w-[600px] md:w-[380px] object-cover lg:max-w-2/3 rounded-4xl shadow-2xl"
+    />
+  </Slide>
+
+  <Slide
+    isLeft={false}
+    hasTopBorder={true}
+    hasBottomBorder={false}
+    bgVariant={true}
+    title="Laura Neira Corbo"
+    subtitle="Docente di Patologia della Voce e Riabilitazione"
+    subPar="presso l’Università Museo Argentino"
+    text="(Argentina)"
+  >
+    <Image
+      loading="lazy"
+      src={neira}
+      alt="foto di laura neira corbo"
+      class="aspect-square lg:w-[600px] md:w-[380px] object-cover lg:max-w-2/3 rounded-4xl shadow-2xl"
+    />
+  </Slide>
+
+
+</Layout>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const slidesAnchor = document.getElementById("slides-anchor");
+    const scrollAboutBtn = document.getElementById("scrollAboutBtn");
+
+    scrollAboutBtn?.addEventListener("click", () => {
+      slidesAnchor?.scrollIntoView({ behavior: "smooth" });
+    });
+  });
+</script>
