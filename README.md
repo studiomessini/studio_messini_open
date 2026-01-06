@@ -5,20 +5,23 @@ contiene tutto il materiale ridistribuibile del sito, con la sola esclusione di 
 ## Tecnologie 
 Il sito si basa su tecnologie Open Source distribuite in origine sotto licenze permissive (MIT, si veda sotto)
 In particolare il sito fa uso di: 
-- Astro 
-- TailwindCSS
-- DaisyUI 
-- Preact 
+- [Astro](https://github.com/withastro/astro)
+- [TailwindCSS](https://github.com/tailwindlabs/tailwindcss)
+- [DaisyUI](https://github.com/saadeghi/daisyui)
+- [Preact](https://github.com/preactjs/preact) 
 
 Tali tecnologie sono da considerarsi esterne alla licenza della repository e il copyright dei marchi sopracitati appartiene esclusivamente ai loro detentori e/o team di sviluppo.
 
 ## Limitazioni d'uso, Licenze
 I sorgenti sono di proprietà di Francesco James Fanti (neosnakex34) ridistribuiti sotto licenza MPLv2 
 sono da intendersi non ridistribuibili il nome dello studio "studio logopedico Liana Messini" "studio messini" e simili; il nome del dominio "studiomessini.com" e i loghi dello studio. Non va considerata riproducibile senza autorizzazione la dicitura "metodo Messini" in quanto soggetto a legge sul copyright (SIAE). 
-I "building blocks" del sito, ovvero Astro, DaisyUI, TailwindCSS e Preact sono soggetti a [licenza MIT](https://opensource.org/license/mit) motivo per cui non sono da intendersi coperti sotto MPLv2 direttamente.
-In ultimo non sono da considerarsi coperte da licenza MPLv2 le foto non direttamente di proprietà dello studio, ovvero le immagini stock prese da Unsplash (che ricadono sutto licenza unsplash).
+I "building blocks" del sito, ovvero Astro, DaisyUI, TailwindCSS e Preact sono soggetti a [licenza MIT](https://opensource.org/license/mit) motivo per cui non sono da intendersi coperti sotto MPLv2 direttamente. Si rimanda comunque alla consultazione delle singole licenze, sulle rispettive pagine github, linkate sopra. 
+In ultimo non sono da considerarsi coperte da licenza MPLv2 le foto non direttamente di proprietà dello studio, ovvero le immagini stock prese da Unsplash, che ricadono sotto [licenza unsplash](https://unsplash.com/license).
 
 Il titolare del sito (Dott.ssa Liana Messini) e il lead Developer (Francesco James Fanti) si riservano di verificare l'ottemperanza di tali condizioni ed eventuali condotte illecite. 
 
 Il seguente repository deve considerarsi una vetrina pubblica e un template per ciò che concerne la costruzione di un sito web con Astro, DaisyUI e Preact, tralasciando tutto quello che concerne il personal branding dello studio Messini. 
 
+## Per segnalazioni di errori
+- potete aprire una issue 
+- contattarmi (https://github.com/neosnakex34)
